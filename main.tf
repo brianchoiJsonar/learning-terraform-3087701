@@ -15,11 +15,10 @@ data "aws_ami" "app_ami" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0ba1f6f0ac0fdbc71"
-  instance_type = "r6i.xlarge"
+  ami           = data.aws_ami.app_ami.id
+  instance_type = "t3.nano"
 
   tags = {
     Name = "HelloWorld"
-    Owner = "brian.choi@imperva.com"
   }
 }
