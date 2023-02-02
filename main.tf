@@ -17,13 +17,13 @@ data "aws_ami" "app_ami" {
 #resource "aws_instance" "web" {
 #  ami           = "ami-0ba1f6f0ac0fdbc71"
 #  instance_type = "r6i.xlarge"
-
+#
 #  tags = {
 #    Name = "HelloWorld"
 #    Owner = "brian.choi@imperva.com"
 #  }
-  
- resource "aws_db_instance" "default" {
+
+resource "aws_db_instance" "default" {
   allocated_storage    = 10
   db_name              = "brian-terraform-testing"
   engine               = "mysql"
@@ -36,7 +36,6 @@ data "aws_ami" "app_ami" {
    
   tags = {
     Owner = "brian.choi@imperva.com"
-  }
   }
   
 }
