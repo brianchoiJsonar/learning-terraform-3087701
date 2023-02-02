@@ -37,6 +37,6 @@ data "aws_ami" "app_ami" {
   tags = {
     Owner = "brian.choi@imperva.com"
   }
-}
+  }
   
 }
